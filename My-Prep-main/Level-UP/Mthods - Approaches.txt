@@ -1,0 +1,71 @@
+Xor 
+Hash Table - (Counting Method )
+
+1 . If input array is sorted in any order ( Whether in Increasing Or Decreasing ) then
+   - Binary search
+   - Two pointers
+
+2 . Sliding window use when array says it does not contain any - negative no ,
+      if array having negative no , so we cant apply sliding window technique
+
+3 . If we need to find any missing values question in an array
+      Method 1 - Use Hashmap  (MyNotes) 
+      
+      Method 2 - So best method is XOR method takes only O(N) time complexity.
+
+      Method 3 -  Sum formula. 
+      It is also best, but when array has large number of elements so it
+      may be possiblity to exceed the integer range 
+
+4 . In Time Complexity  -  Always focus on Upper Bound ( Worst Case Time Complexity )
+
+5 . When we need to find a element whose left side part and right side part is equal 
+      
+      Method 1 -  Brute Force Approach  O(N^2) -  Ek ek element pr jaakr uska left or right sum calculate and compare 
+
+        for(int i=0;i<nums.size();i++)
+        {
+            int leftsum=0,rightsum=0;
+            //  For left sum
+            for(int j=0;j<i;j++)
+            {
+                leftsum = leftsum+nums[j];
+            }
+            //  For right sum
+            for(int k=nums.size()-1;k>i;k--)
+            {
+                rightsum = rightsum+ nums[k];
+            }
+            //  Comparing 
+            if(leftsum==rightsum)return i;
+
+        }
+
+     Method 2 -  Sum Calcualte krne ke bdd usko rsum me assign , ek ek krke iterate and substract from rsum and add on lsum
+     
+     int sum=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            sum = sum+nums[i];
+        }
+        
+        int lsum = 0;
+        int rsum = sum;
+        for(int i=0;i<nums.size();i++)
+        {
+            rsum = rsum-nums[i];
+            if(lsum==rsum)return i;
+            lsum = lsum+nums[i];
+        }
+
+6 - If array is Small size of Aray , then we go Toward Selection Sort 
+7 - If says Merge 2 Sorted Array 
+     Method  1 using merge sort Algorithm , which Take O(N) Space Complexity  
+
+     Methdo 2 without Using Extra space - https://leetcode.com/problems/merge-sorted-array/
+
+8 -  Rotate Array - arr[(i+k)%n] = arr[i] cyclic Way me k position me shift krdunga 
+
+       Input: nums = [1,2,3,4,5,6,7] , k = 3
+       Output: [5,6,7,1,2,3,4]
+

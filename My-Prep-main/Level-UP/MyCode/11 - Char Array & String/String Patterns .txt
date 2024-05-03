@@ -1,0 +1,166 @@
+
+s.replace(startIndex , aage kitna indexIgnore krna hai  , kya daalna hai )
+    string str = "This is my firsts message";
+    string str2 = "secondsDad";
+    str.replace(11, 6, str2);
+
+11th index se str2 dalna start hoga , str2 saara dalne ke bdd , next 6t character hatana hai
+
+Jitna value beech wala dia hai means str2 jis index se start hona hai waha se wo element daalna start krdega
+uske bdd beech me jitna no dia hai utna character hatana hai
+
+*************************************************************************************
+
+getline()  -> This function is used to store a stream of characters as entered by the user in the object memory.
+
+getLength(variable_Name);
+
+strlen(variable_Name);
+
+*************************************************************************************
+
+strcmp(first_str, second_str );
+
+compares these two strings lexicographically, and then returns
+0 -> all of the characters in both strings are the same.
+Ex -
+    string str = "Ujjwal12327";
+    string str2 = "Ujjwal12327";
+    cout << "str.compare(str2)->  " << str.compare(str2) << '\n';
+
+1 ->  first string ki ASCII bdi hai second string ki to 1
+      or jitna first bda hai utna +value me ans aaega
+
+-1 -> second string ki ASCII bdi hai first string ki to 1
+      or jitna second bda utna -value me ans aaega
+
+Ex -
+
+    str =  "Ujjwal12326";
+    str2 = "Ujjwal12327";
+    cout << "str.compare(str2)->  " << str.compare(str2) << '\n';
+    cout << "str2.compare(str)->  " << str2.compare(str) << "\n\n";
+
+str.compare(str2)-> -1
+str2.compare(str)-> 1
+
+    str =  "Ujjwal12328";
+    str2 = "Ujjwal12327";
+    cout << "str.compare(str2)->  " << str.compare(str2) << '\n';
+    cout << "str2.compare(str)->  " << str2.compare(str) << "\n\n";
+
+str.compare(str2)-> 1
+str2.compare(str)-> -1
+
+*************************************************************************************
+
+str.find(and_variable); -> return index value , if not found return garbage value
+
+    string str = "Hello Jee Kaise Ho Saare";
+    string str2 = "Jee";
+
+    cout<<"npos value :"<<string::npos<<endl;   // is a garbage value
+
+    means agr position garabage ke bararabar milta hai means not find any value ,
+    Agr index mil jaata hai means find the value
+
+    if (str.find(str2) != string::npos)
+    {
+        cout << " FOUND \n";
+    }
+    else
+        cout << "Not Found";
+
+*************************************************************************************
+
+strcpy(variable , "value" ) -> copy the value into existing char array
+
+reverse(variable name);  -> reverse the string
+
+capacity() -> return size how much can store character
+
+resize() -> This function changes the size of the string, the size can be increased or decreased.
+
+length() -> return size of string
+
+Convert UpperCase to LowerCase :
+
+    for (int i = 0; i < n; i++)
+    {
+        if (ch[i] >= 'A' && ch[i] <= 'Z')
+            ch[i] = ch[i] - 'A' + 'a';
+    }
+Convert Lower to Upper Case :
+
+    for (int i = 0; i < n; i++)
+    {
+        if (ch[i] >= 'a' && ch[i] <= 'z')
+            ch[i] = ch[i] - 'a' + 'A';
+    }
+
+*************************************************************************************
+
+cin ->  stops reading at white spaces and cout stops printing at white spaces
+So if i write Aakash Prajapati
+It consider only 1st space se phle ka part
+
+cin.getline(variable , size ) -> Acess white spces , tab , as well as enter
+
+String me input lene ke tarika
+    getline(cin, str2);
+
+*************************************************************************************
+
+    // difference between string and array
+
+    char ch[100] = "B_abba_r";
+    cout << ch << '\n';
+    ch[1] = '\0';
+    ch[6] = '\0';
+    cout << ch << '\n';
+
+    #Output -> B
+
+    string str = "B_abba_r";
+    cout << str << '\n';
+    str[1] = '\0';
+    str[6] = '\0';
+    cout << str << '\n';
+
+    #Output -> Babbar
+
+    *************************************************************************************
+
+    //                                         String
+
+    str.length()
+    str.empty()
+
+    s.erase(startindex , endindex )
+
+    str.push_back('char') -> add from last index
+    str.pop_back() -> remove from last index
+
+    str.substr(1, 4)  -> Access some part of string
+
+*************************************************************************************
+
+    // character ka ASCII print hoga
+    for (int i = 0; i < 7; i++)
+    {
+        cout << (int)ch[i] << ' ';
+    }
+
+*************************************************************************************
+
+Hr string ke end me '\0' NULL character hamesha hota hai
+
+*************************************************************************************
+
+        int j=97;
+        cout<< (char)j ;
+
+        This is Type Conversion
+
+*************************************************************************************
+

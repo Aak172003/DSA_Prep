@@ -1,0 +1,9 @@
+Greedy -> set , sort , priority_Queue (max , min)
+
+**************************************************************
+
+All are same Problem 
+
+N meeting in a Room 
+Activity selection Problem 
+n trains and 1 platform 

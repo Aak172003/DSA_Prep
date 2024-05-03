@@ -1,0 +1,146 @@
+Examples of stable sorting algorithm :
+Bubble sort, Insertion sort, Merge sort, Counting sort, Tim sort
+
+Examples of unstable sorting algorithm :
+Selection sort, Heap sort, Shell sort, Quicksort.
+
+*********************************************************************************************
+
+Bubble Sort  -> Do do ka pair bna kr sort 
+
+1. Approach -> Simple Method 
+
+for (int round = 0; round < n - 1; round++)
+    {
+        // second loop iterate for comparisons , or swapping , ye br br last elemts tk jaega
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+
+2. Approach -> Yaha hum sidha ye check krte hai , agr kahi arr[ele + 1] > arr[ele]
+               Which means already sorted hai bs waha se wapas 
+
+    for (int round = 0; round < n - 1; round++)
+    {
+
+        // if sorted hoga to , phle hi pss me pta lg jaega , agr no swapping means , elemets alredy in sorted order
+        // i krne se , hr ek ek loop me sort hoga last element , to hum dubara loop usse ek phle tk hi chalenge ,
+        // jaha tk sort hogy hai
+
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+        // if no swapping occur means , array is alreaady sorted, in ascending order
+        if (swapped == false)
+        {
+            break;
+        }
+    }
+
+3. Approach -> Sbse Optimise 
+
+        //Jiase ki mai jaanta hu , mere hr pass round me ek element apni sahi jgah pauch jaata hai
+        // to kya jaroorat hai br br us element pr jaane ki usse piche tk ke walo ko consider krenge 
+
+        // n-round  krne se , ek ek iteration me ek value apni correct position pr pauch jaa rhi hai
+        // so no need ki hume last tk jaana hai br br  ,
+        // to hum dubara loop usse ek phle tk hi chalenge ,
+        // jaha tk sort hogy hai
+
+    bool swapped = false;
+
+    for (int round = 0; round < n - 1; round++)
+    {
+        // if sorted hoga to , phle hi pss me pta lg jaega , agr no swapping means , elemets alredy in sorted order
+        // i krne se , hr ek ek loop me sort hoga last element , to hum dubara loop usse ek phle tk hi chalenge ,
+        // jaha tk sort hogy hai
+        for (int j = 0; j < n - round; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+        // if no swapping occur means , array is alreaady sorted, in ascending order
+        if (swapped == false)
+        {
+            break;
+        }
+    }
+
+*********************************************************************************************
+
+Selection Sort -> do loop lgega 
+1st loop -> ek ek element ko lega 
+2nd loop us element ke aagr chal kr sbs echota element find krega ,
+or jaise hi usko sbse chota mil jaata hai ,
+tabhi wo swap kr deta hai or first loop 1 br 
+executr kr deta hai 
+
+Image  ->> From Below Link
+
+/*
+Coding Ninja link - https://www.codingninjas.com/codestudio/problems/selection-sort_981162?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTab=1
+*/
+
+for(int i=0;i<n;i++)
+    {
+        // Take 1st As minimum Value index
+        int min_idx =  i;
+
+        for(int j=i+1;j<n;j++)
+        {
+            // Compare if any value is lesser than our assumption value so update minimum index
+            // ye process br br chalega jisse agr first me minimum mila or last me sbse minimum mila to wo min_idx me store hojaega 
+            if(arr[min_idx]>arr[j])
+            {
+                min_idx = j;
+            }
+        }
+
+         // Use inbuilt Function 
+        // swap(arr[i],arr[min_idx]);
+    }
+
+*********************************************************************************************
+
+Insertion sort -> Isme hum i start with 1st index , 
+phr j = i-1 bna dia 
+
+  for (int i = 1; i < n; i++)
+    {
+        // temp me wo i ki value daal dia
+        int temp = arr[i];
+        //  initialise j with i-1,
+        // value se jisse ki hum uske piche ki saari values me comoarison kr ske
+        int j = i - 1;
+
+        // hum ek ek krke piche jaate rhte hai i-1 se jb tk 0 pr nhi pauch jaate
+        for (; j >= 0; j--)
+        {
+
+            // agr jo temp me hai , uski value choti hai aane waali hr value se to j ko swap kr denge
+            if (arr[j] > temp)
+            {
+                arr[j + 1] = arr[j];
+            }
+            // or jaha aane wali value choti pdti hai temp ki value se , to hum sidha keh skte hai usko value ke just bdd apni value aaegi
+            else
+            {
+                break;
+            }
+        }
+        arr[j + 1] = temp;
+    }
+

@@ -1,0 +1,5 @@
+g++ daba kr .\ type krna then tab press
+g++ '.\Single-Linked-List .cpp'
+
+Then ek .exe file aaega , phr usko .exe file ka name thoda sa likhna then press tab automatic poora naam le lega 
+deing-Part\Babbar Linked List> .\a.exe

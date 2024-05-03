@@ -1,0 +1,66 @@
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 1st Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+1. Question me jaise hi subsequence ki bt hoti , hai iska mtlb only prefer 
+
+Example -> Print Subsequence 
+
+-> Include then Exclude pattern 
+//                 Or 
+-> Exclude then Include Pattern
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 2nd Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+
+2. Jaroorat pdhti hai to hume  , Array pr hi traverse krke Reccursion Lgana ho
+
+Example Like -> coin Change Problem
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 3rd Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+
+2. stoi(string);  -> It only work with "1235" , "5979" 
+                     string me me jo bhi no  die hai , un no ko wo ek integer form me convert krta hai 
+
+Ex - value = "123"  => stoi(value)  => It return 123 as a number 
+
+Exception :
+
+1. str =  "Aak548ash" ->  Stoi kbhi bhi istype ke String ke sth nhi kaam krega 
+Because it can't able to conver Character into integer 
+
+2. str = "1797NoProgrammer" -> But stoi is string ke sth kaam krega 
+                         stoi(str) -> return 1797
+
+/ **********************************************
+Note -> 
+1. agr string me no phle aate hai , to wo un no ko convert krdega , 
+   or Character ko convert nhi kr skta integer me 
+
+2. But agr No string me kisi Character ke bdd aata hai , 
+   so wo char aate hi break ho jaega , or no in string not convert into integer
+
+********************************************** /
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 4rth Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+
+3. Reccursion ki problems me pass by reference is better than pass by copy
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 5th Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+String Part 
+
+s.find(_____)
+         |->  here write what you waana find
+
+s.substr(beginindex , endIndex)  -> This is used to extract some part of string 
+
+s.erase() -> Erase characters from string 
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((( 5th Note ))))))))))))))))))))))))))))))))))))))))))))))))))
+
+

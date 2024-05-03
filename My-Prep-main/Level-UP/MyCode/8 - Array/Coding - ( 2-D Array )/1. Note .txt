@@ -1,0 +1,3 @@
+
+// During Function calling 2D Array me  , 
+// at least Column ka size initially parameter me pass krna pdega
